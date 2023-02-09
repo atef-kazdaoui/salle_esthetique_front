@@ -22,7 +22,7 @@ function App() {
                 <Route path='/connexion'  element={<Connexion />}> </Route>
                 <Route path='/Apropos'  element={<Apropos />}> </Route>
             </Routes>
-            
+            <Footer />
 
         </div>
     );
