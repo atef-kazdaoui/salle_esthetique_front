@@ -1,48 +1,62 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import './Connexion.css';
-import { useState,useRef,useEffect } from 'react';
-function BasicExample() {
-  const [state,setState]=useState("")//lahne hat usestate fergha w hediya hiya eli bch yetsab fihaa el valeur eli mawjoud f formulaire bara chouf loutaa talka value f westha
-  const handleInput = (e )=> {
-     setState(e.target.value)
-     
-  };
+import React, { useState} from 'react';
+const SigninForm = () => {
   
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [Cpassword, setCpassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log( email, password,Cpassword);
+     
+    if (email===  "") { alert("veuillez saisir votre email")  }else{setEmail("")}
+    
+    if (password===  "") { alert("veuillez saisir votre mot de passe ")  }else{setPassword("")}
+    if (password === Cpassword) {setPassword("") && setCpassword("")}else{ alert('les mot de passe ne sont pas identique') }
+    // Ici, vous pouvez envoyer les données du formulaire à votre API
+
+  };
   return (
-    
-
-    
-    <Form>
-      <div className='d-flex align-items-center h-100' >
-        <div className="m-auto">
-           
-        <h1>connexion</h1>
-
-        </div>
-        
-      </div>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>veuillez saisir votre email</Form.Label>
-        
-        <Form.Control type="email" placeholder="email" value={state}  onChange={handleInput} />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Mot de passe </Form.Label>
-        <Form.Control type="password" placeholder="Mot de passe" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Verifier moi" />
-      </Form.Group>
+    <form onSubmit={handleSubmit}>
       
-      <Button variant="primary" type="submit">
-        Se connecter
-      </Button>
-      <h1>{state} </h1>
-    </Form>
-    
-  );
-}
+      <div className="form-group">
+        <label htmlFor="email">Adresse e-mail :</label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+      </div>
+      
+      
+      <div className="form-group">
+        <label htmlFor="password">Mot de passe :</label>
+        <input
+          type="password"
+          className="form-control"
+          id="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">Confirmation du mot de passe:</label>
+        <input
+          type="password"
+          className="form-control"
+          id="Cpassword"
+          value={Cpassword}
+          onChange={(event) => setCpassword(event.target.value)}
+        />
+      </div>
 
-export default BasicExample;
+      <button type="submit" className="btn btn-primary">
+        Connexion
+      </button>
+    </form>
+  );
+};
+
+export default SigninForm;

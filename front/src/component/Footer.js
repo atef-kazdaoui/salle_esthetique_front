@@ -4,12 +4,12 @@ import './Footer.css';
 function Footer() {
   return (
     
-    <Navbar bg="light" className='navbar-dark bg-dark fixed-bottom d-flex align-items-center' id='footer'  >
+    <Navbar bg="light" className='bg-dark py-3 sticky-bottom d-flex align-items-center' id='footer'  >
       <Container>
         <Row className='row mx-auto'>
           <Col xs={12} md={4}>
             <Nav className="mr-auto">
-              <Nav.Link href="#">Link 1</Nav.Link>
+              <Nav.Link className='navlink' href="#">Link 1</Nav.Link>
               <Nav.Link href="#">Link 2</Nav.Link>
               <Nav.Link href="#">Link 3</Nav.Link>
             </Nav>

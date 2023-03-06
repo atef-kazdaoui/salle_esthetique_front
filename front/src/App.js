@@ -10,20 +10,21 @@ import Connexion from './component/Connexion';
 import Apropos from './component/Apropos'
 import Footer from './component/Footer.js';
 
+
 function App() {
-    return ( 
+    
+   
+    return (
         <div className="App">
 
             <Navbar />
-            
-            <Routes>
-                <Route path='/' exact element={<Home />} > </Route>
-                <Route path='/inscription'  element={<Inscription />}> </Route>
-                <Route path='/connexion'  element={<Connexion />}> </Route>
-                <Route path='/Apropos'  element={<Apropos />}> </Route>
-            </Routes>
-            <Footer />
-
+                <Routes>
+                    <Route path='/' exact element={<Home />} > </Route>
+                    <Route path='/inscription' element={<Inscription />}> </Route>
+                    <Route path='/connexion' element={<Connexion />}> </Route>
+                    <Route path='/Apropos' element={<Apropos />}> </Route>
+                </Routes>
+           
         </div>
     );
 }

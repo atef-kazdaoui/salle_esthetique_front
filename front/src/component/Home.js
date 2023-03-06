@@ -1,14 +1,24 @@
 import React from 'react'
 import Carousel from './Carousel';
-import Dropdown from './Dropdown';
+import Filtreimage from './Filtreimage'
+import './Home.css'
+
 function home() {
+ 
   return (
-    <div className='body' >
+    <div className='body'>
      
-    <Carousel />
-    <h1>nos produits</h1>
+     <Carousel />
+     <div className='produits'>
+     <h1>nos produits</h1>
     
-    <Dropdown />
+     <Filtreimage/>
+     
+      </div>
+    
+    
+    
+    
     </div>
    
    
