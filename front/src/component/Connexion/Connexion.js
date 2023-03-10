@@ -1,4 +1,7 @@
 import React, { useState} from 'react';
+import { Link } from 'react-router-dom';
+import './Connexion.css'
+import { NavLink } from 'react-router-dom';
 const SigninForm = () => {
   
   const [email, setEmail] = useState('');
@@ -17,8 +20,13 @@ const SigninForm = () => {
 
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+    <div className='connexion'>
+      <h1>Connexion</h1>
+    </div>
+    <form onSubmit={handleSubmit} className="form-connexion">
       
+      <div class='container'>
       <div className="form-group">
         <label htmlFor="email">Adresse e-mail :</label>
         <input
@@ -55,8 +63,20 @@ const SigninForm = () => {
       <button type="submit" className="btn btn-primary">
         Connexion
       </button>
+      </div>
+      <div className='connexion'>
+        <p></p>
+        
+        <NavLink as={Link} to="/Inscription ">  <h3>S'inscrire</h3></NavLink>
+        
+       
+      </div>
+      
     </form>
+    </>
+    
   );
+  
 };
 
 export default SigninForm;

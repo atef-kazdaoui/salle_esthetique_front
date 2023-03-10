@@ -9,7 +9,7 @@ const App = () => {
     
   ];
 
-  return <div style={{ width: '4000px', height: '300px'}}> <FilterGallery items={items} /> </div>;
+  return <div style={{ width: '90vw', height: '300px'}}> <FilterGallery items={items} /> </div>;
 };
 
 export default App;

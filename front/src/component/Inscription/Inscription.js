@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import './Inscription.css';
 const SignupForm = () => {
   
   const [nom, setNom] = useState('');
@@ -27,8 +28,13 @@ const SignupForm = () => {
 
   };
   return (
-    <form onSubmit={handleSubmit}>
-      
+   <>
+   <div className='inscription'>
+    <h1>inscription</h1>
+
+   </div>
+    <form onSubmit={handleSubmit} className="form-inscription">
+      <div className='container'>
       <div className="form-group">
         <label htmlFor="nom">Nom :</label>
         <input
@@ -101,7 +107,9 @@ const SignupForm = () => {
       <button type="submit" className="btn btn-primary">
         Connexion
       </button>
+      </div>
     </form>
+    </>
   );
 };
 

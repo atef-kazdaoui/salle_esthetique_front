@@ -3,12 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import '../component/navbar.css';
+import '../Navbar/navbar.css';
 import { Link } from 'react-router-dom';
 
 function navbar() {
   return (
-    <Navbar bg="light" expand="lg" className='navbar-dark bg-dark'>
+    <Navbar  expand="lg" className='navbar-dark bg-dark'>
       <Container fluid>
         <Navbar.Brand href="#">LOGO</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -20,8 +20,10 @@ function navbar() {
             id='Navbar'
           >
             
-            <Nav.Link as={Link} to="/" >Home</Nav.Link>
-            <Nav.Link as={Link} to="/inscription">Inscription </Nav.Link>
+            <Nav.Link as={Link} to="/"  >Home</Nav.Link>
+            <Nav.Link as={Link} to="/">Nos local</Nav.Link>
+            <Nav.Link as={Link} to="/">aaaa</Nav.Link>
+            <Nav.Link as={Link} to="/">bbbb</Nav.Link>
             <Nav.Link as={Link} to="/connexion">Connexion</Nav.Link>
             <Nav.Link as={Link} to="/Apropos">A propos de nous</Nav.Link>
             
